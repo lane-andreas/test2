@@ -4,6 +4,7 @@ window.addEventListener("scroll", function () {
   var sectionTop = horizontalOut.offsetTop;
   var sectionHeight = horizontalOut.offsetHeight;
   var windowHeight = window.innerHeight;
+  var sectionWidth = horizontalIn.clientWidth - window.innerWidth;
 
   var startScroll = sectionTop;
   var endScroll = sectionTop + sectionHeight - windowHeight;
@@ -14,10 +15,9 @@ window.addEventListener("scroll", function () {
 
     horizontalIn.animate(
       {
-        transform: "translateX(" + -scrollPercent * 100 + "%)",
+        transform: "translateX(" + -scrollPercent * sectionWidth + "px)",
       },
       { duration: 500, fill: "forwards" }
     );
-    console.log(scrollPercent);
   }
 });
