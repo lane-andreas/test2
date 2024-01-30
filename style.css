@@ -12,6 +12,10 @@ body {
   height: 100vh;
 }
 
+#spline {
+  translate: 20vw 20vh;
+}
+
 .horizontalIn {
   height: 100vh;
   width: 300vw;
